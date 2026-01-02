@@ -12,7 +12,7 @@ import com.codehills.car_management.backend.exception.CarNotFoundException;
 import com.codehills.car_management.backend.models.Car;
 import com.codehills.car_management.backend.models.FuelEntry;
 import com.codehills.car_management.backend.utils.OdometerLevel;
-import com.codehills.car_management.backend.utils.Utils;
+import com.codehills.car_management.backend.utils.Odometer;
 
 @Service
 public class CarServiceImpl implements CarService {
@@ -72,8 +72,8 @@ public class CarServiceImpl implements CarService {
             double totalCost = fuelEntries.stream().mapToDouble(
                             FuelEntry::getPrice)
                     .sum();
-            double max= Utils.getOdometer(fuelEntries, OdometerLevel.MAX);
-            double min= Utils.getOdometer(fuelEntries, OdometerLevel.MIN);
+            double max= Odometer.getOdometer(fuelEntries, OdometerLevel.MAX);
+            double min= Odometer.getOdometer(fuelEntries, OdometerLevel.MIN);
             double totalDistance = max - min;
             double averageOdometer = (totalLiters / totalDistance)*100;
             return new FuelStats(totalLiters, totalCost, averageOdometer);

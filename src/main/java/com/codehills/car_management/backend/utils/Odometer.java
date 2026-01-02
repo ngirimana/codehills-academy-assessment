@@ -4,7 +4,7 @@ import com.codehills.car_management.backend.models.FuelEntry;
 
 import java.util.List;
 
-public class Utils {
+public class Odometer {
     public static double getOdometer(List<FuelEntry> fuelEntries,OdometerLevel level) {
         if(level == OdometerLevel.MIN) {
             return fuelEntries.stream()
