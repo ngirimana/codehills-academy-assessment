@@ -11,7 +11,10 @@ Java application with in-memory storage
 - `Spring Boot 4.0.1` for the backend server
 - `Maven`  for dependency management and build automation
 
-## Setup Instructions
+## Setup and Running the Application Instructions
+### Prerequisites
+- Ensure you have `Java 17` or higher version and `Maven` installed on your machine.
+### Steps to Run the Application
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/ngirimana/codehills-academy-assessment.git
@@ -26,7 +29,9 @@ Java application with in-memory storage
    mvn spring-boot:run
    ```
 and the server will start on `http://localhost:8080`.
-### API Endpoints examples
+
+ **Running API Endpoints examples**
+
 | Action      | Method | Endpoint            | Request                                |
 |------------|--------|---------------------|----------------------------------------|
 | Create Car | POST   | /api/cars           |{"brand":"Toyota","model":"Corolla","year":2029|
@@ -34,8 +39,8 @@ and the server will start on `http://localhost:8080`.
 | Add Fuel   | POST   | /api/cars/{id}/fuel |{"liters":40,"pricePerLiter":52.5,"odometer":45000}|
 | Get Stats  | GET    | /api/cars/{id}/fuel/stats | N/A  |
 
-### Running servlet integration example
-  Go to browser and access `http://localhost:8080/servlet/fuel-stats?carId=1`
+   **Running servlet integration example**
+   Go to browser and access `http://localhost:8080/servlet/fuel-stats?carId=1`
 
 4. **Run the CLI Client**:
    Open a new terminal and navigate to the project directory, then run:
@@ -44,7 +49,8 @@ and the server will start on `http://localhost:8080`.
     ```
 5. **Using the CLI**:
    Follow the on-screen prompts to add cars, record fuel entries, and view reports.
- ### Commands example
+
+  **Commands example**
 1. To add a car: 
 ```create-car --brand Toyota --model Corolla --year 2018 ```
 2. To record a fuel entry:
