@@ -40,6 +40,7 @@ and the server will start on `http://localhost:8080`.
 | Get Stats  | GET    | /api/cars/{id}/fuel/stats | N/A  |
 
    **Running servlet integration example**
+
    Go to browser and access `http://localhost:8080/servlet/fuel-stats?carId=1`
 
 4. **Run the CLI Client**:
